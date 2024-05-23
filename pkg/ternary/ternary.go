@@ -8,6 +8,14 @@ func Or[T any](a, b T) T {
 	return b
 }
 
+// OrString returns the first non-empty string, or the second string if both are empty.
+func OrString(a, b string) string {
+	if a != "" {
+		return a
+	}
+	return b
+}
+
 // And returns the second value if the first value is non-nil, or nil if the first value is nil.
 func And[T any](a, b *T) *T {
 	if a == nil {
