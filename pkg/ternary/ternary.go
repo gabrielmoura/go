@@ -1,7 +1,7 @@
 package ternary
 
 // Or returns the first non-nil value, or the second value if both are nil.
-func Or[T any](a, b T) T {
+func Or(a, b interface{}) interface{} {
 	if a != nil {
 		return a
 	}
